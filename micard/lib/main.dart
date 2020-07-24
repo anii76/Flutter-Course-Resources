@@ -19,98 +19,70 @@ class MiCard extends StatelessWidget {
       backgroundColor: Colors.teal,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 200.0, horizontal: 55.0),
-          child: Column(
-            children: [
-              CircleAvatar(
-                radius: 60,
-                backgroundImage: AssetImage('assets/images/anfel.jpg'),
-              ),
-              Text(
-                'Anfal Bourouina',
-                style: TextStyle(
+          padding:
+              const EdgeInsets.symmetric(vertical: 200.0, horizontal: 55.0),
+          child: Column(children: [
+            CircleAvatar(
+              radius: 60,
+              backgroundImage: AssetImage('assets/images/anfel.jpg'),
+            ),
+            Text(
+              'Anfal Bourouina',
+              style: TextStyle(
                   color: Colors.white,
                   fontSize: 36,
                   fontWeight: FontWeight.w500,
-                  fontFamily: 'Pacifico'
-                ),
-              ),
-              Text(
-                'FLUTTER DEVELOPER',
-                style: TextStyle(
+                  fontFamily: 'Pacifico'),
+            ),
+            Text(
+              'FLUTTER DEVELOPER',
+              style: TextStyle(
                   color: Colors.white,
                   letterSpacing: 2,
                   fontFamily: 'Source Sans Pro',
                   fontSize: 16,
-                  fontWeight: FontWeight.w500
+                  fontWeight: FontWeight.w500),
+            ),
+            SizedBox(height: 24),
+            Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(11)),
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Colors.teal.shade900,
                 ),
-
-              ),
-              SizedBox(
-                height: 24
-              ),
-              Container(
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(11)
-                ),
-                child: Row(children: <Widget>[
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Icon(
-                    Icons.phone,
+                title: Text(
+                  '+213 675555555',
+                  style: TextStyle(
                     color: Colors.teal.shade900,
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 18,
                   ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(
-                    '+213 675290985',
-                    style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 18,
-                    ),
-                  ),
-                ],),
-              ),
-              SizedBox(
-                height: 10
-              ),
-              Container(
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(11)
                 ),
-                child: Row(children: <Widget>[
-                  SizedBox(
-                    width: 10,
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(11)),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.teal.shade900,
+                ),
+                title: Text(
+                  'a.bourouina@esi-sba.dz',
+                  style: TextStyle(
+                    color: Colors.teal.shade900,
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 18,
                   ),
-                  Icon(
-                    Icons.email,
-                     color: Colors.teal.shade900,
-                  ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(
-                    'a.bourouina@esi-sba.dz',
-                    style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 18,
-                    ),
-                  ),
-                ],),
-              )
-            ]
-          ),
+                ),
+              ),
+            )
+          ]),
         ),
       ),
-      
     );
   }
 }
